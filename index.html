@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFR2GFKT75"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-RFR2GFKT75');
+  </script> -->
+  <!-- Google Tag Manager -->
+  <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  })(window,document,'script','dataLayer','GTM-NC38VTD');</script> -->
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="refresh" content="0; URL=https://cs.stanford.edu/~leoyuan/"> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+	<!-- <meta name="google-site-verification" content="u_--0s_Uw50r4zCgRrzltkmFhNCduYOJwPGlKVTuNJU" /> -->
+
+  <title>Jianlong He</title>
+  <meta name="description" lang="en" content="Academic homepage for Jianlong He">
+  <meta name="keywords" lang="en" content="Jianlong He" />
+  
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%8C%9F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700;8..60,800&display=swap">
+
+  <!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+</script>
+<![endif]-->
+
+  <script type="text/javascript">
+    function ShowHide(divId, linkDivId) {
+        if(document.getElementById(divId).style.display == 'none') {
+            document.getElementById(divId).style.display='block';
+            document.getElementById(linkDivId).style.display='none'; // Hide the "read more" link
+        }
+        else {
+            document.getElementById(divId).style.display = 'none';
+        }
+    }
+  </script>
+
+  <style>
+    li.indented {
+        position: relative;
+        padding-left: 90px;
+    }
+
+    li.indented::before {
+        content: attr(data-date);
+        position: absolute;
+        left: 0;
+        top: 0;
+        white-space: nowrap;
+    }
+  </style>
+  
+
+  
+</head>
+
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC38VTD"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+<!-- End Google Tag Manager (noscript) -->
+
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+<nav class="site-nav">
+  <a href="#" class="menu-icon">
+    <svg viewBox="0 0 18 15">
+      <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+      <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+      <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+    </svg>
+  </a>
+
+  <div class="trigger">
+    <a class="page-link" href="#bio"><b>Biography</b></a>
+    <a class="page-link" href="#news"><b>News</b></a>
+    <a class="page-link" href="#timeline"><b>Experiences</b></a>
+    <a class="page-link" href="#publications"><b>Publications</b></a>
+    <a class="page-link" href="#codebase"><b>GitHub</b></a>
+    <a class="page-link" href="#awards"><b>Honors & Awards</b></a>
+    <a class="page-link" href="#academicservices"><b>Academic Services </b></a>
+    <!--<a class="page-link" href="#otherprojects">Projects</a>-->
+    <!-- Button for Posts -->
+  </div>
+</nav>
+  </div>
+</header>
+
+  <div id="profile-cover" class="cover shallow-bg img-responsive">
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+    <div id="profile-namecard" class="profile-wrapper wrapper-light">
+      <div id="my-pic" class="profile-col profile-col-1">
+        <img id="profile-avatar" src="images/images/JianlongHe.jpeg" alt="Me" class="circle-img border-dark"/>
+      </div>
+      <div id="my-contact" class="profile-col profile-col-2">
+        <div id="my-name" class="text-grey-dark">
+          Jianlong He<br>
+        </div>
+        <div id="my-title" class="text-grey">
+          Incoming Ph.D. Student, WHU
+        </div>
+        <div id="my-email" class="text-grey-light">
+          hejianlong [at] mail [dot] jxust [dot] edu [dot] com
+        </div>
+        <div id="my-research-line" aria-label="Research interests">
+          <span class="typing-prefix">Research&nbsp;›</span>
+          <span id="typing-text"></span><span class="typing-caret" aria-hidden="true"></span>
+        </div>
+
+	</div>
+        <div class="social-media">
+          <a href="https://scholar.google.com/citations?user=3WKpzJ0AAAAJ&hl=en" target="_blank" class="icon-button linkedin">
+          <i class="ai ai-google-scholar-square icon-linkedin"></i>
+            <span></span>
+          </a>
+
+          <a href="https://github.com/elaxEgan" target="_blank" class="icon-button github">
+            <i class="fa fa-github icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://elaxEgan.github.io/" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-linkedin icon-linkedin"></i>
+            <span></span>
+          </a>
+         
+          <a href="data/CV_of_Jianlong_He.pdf" target="_blank" class="icon-button github">
+            <i class="ai ai-cv icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="mailto:hejianlong@mail.jxust.edu.cn" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-envelope icon-linkedin"></i>
+            <span></span>
+          </a>
+        </div>
+      </div>
+
+      <!-- <div id="my-desc" class="profile-col profile-col-2 hide">
+        <div id="my-desc-title">
+          Another me.
+        </div>
+        <div id="my-desc-content">
+          I enjoy running, traveling, hiking, movies, music and so much more<br>
+        </div>
+      </div> -->
+    </div>
+  <!-- <script type="text/javascript">
+    function deepFeature()
+    {
+      $('#profile-avatar').attr('src', 'images/self-portrait/deep-me.jpg');
+      $('#profile-avatar').removeClass('border-dark');
+      $('#profile-avatar').addClass('border-bright');
+
+      $('#profile-cover').removeClass('shallow-bg');
+      $('#profile-cover').addClass('deep-bg');
+      
+      $('#profile-namecard').removeClass('wrapper-light');
+      $('#profile-namecard').addClass('wrapper-dark');
+      
+      $('#my-desc').removeClass('hide');
+      $('#my-contact').addClass('hide');    
+      // console.log('Move in now...');
+    }
+
+    function shallowFeature()
+    {
+      $('#profile-avatar').attr('src', 'images/self-portrait/me.jpg');
+      $('#profile-avatar').removeClass('border-bright');
+      $('#profile-avatar').addClass('border-dark');
+
+      $('#profile-cover').removeClass('deep-bg');
+      $('#profile-cover').addClass('shallow-bg');
+      
+      $('#profile-namecard').removeClass('wrapper-dark');
+      $('#profile-namecard').addClass('wrapper-light');
+      
+      $('#my-contact').removeClass('hide');
+      $('#my-desc').addClass('hide');
+      // console.log('Move out now...');
+    }
+
+    $(function() { 
+      $('#my-pic').hover(deepFeature, shallowFeature);
+    })
+
+  </script> -->
+
+<div class="page-content">
+<div class="wrapper">
+<div id="bio" class="bio">
+
+  <h1 class="md-heading text-left">
+    <i class="fa fa-id-card" aria-hidden="true"></i>
+    About
+  </h1>
+  <div class="bio-body" style="overflow:hidden;">
+    <p>
+      I am Jianlong He <span class="chinese-name">(贺健龙)</span>. I will soon pursue my Ph.D. at the <a href="https://www.whu.edu.cn" target="_blank">Wuhan University</a>.
+      I am currently pursuing my M.Eng. degree in Computer Technology at <a href="https://www.jxust.edu.cn/" target="_blank">Jiangxi University of Science and Technology</a>,
+      where I was advised by <a href="https://ie.jxust.edu.cn/info/1094/8189.htm" target="_blank">Prof. Huilan Luo</a>.
+      My research interests include <span class="research-highlight">optical remote sensing image interpretation</span> and <span class="research-highlight">multi-task learning</span>.
+      I am always open to related collaborations. If you are interested in discussing potential projects, please feel free to contact me via
+      <a href="mailto:hejianlong@mail.jxust.edu.cn" target="_blank">email</a>.
+      <br>
+    </p>
+<div class="bio-grid">
+<div class="bio-panel">
+  <h3>
+    <i class="fa fa-star" aria-hidden="true"></i>
+    <strong>Interests</strong>
+  </h3>
+  <ul>
+    <li><b>Remote Sensing Image Interpretation</b></li>
+    <li><b>Salient Object Detection</b></li>
+    <li><b>Multi-Task Learning</b></li>
+    <li><b>Computer Vision</b></li>
+  
+  </ul>
+</div>
+
+<div class="bio-panel">
+  <h3>
+    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+    <strong>Education</strong>
+  </h3>
+  <b>Jiangxi University of Science and Technology</b><br>
+  <ul>
+    <li>M.Eng. in Computer Technology, Sep. 2023 - Jun. 2026</li>
+    <li>Advisor: <a href="https://ie.jxust.edu.cn/info/1094/8189.htm" target="_blank">Prof. Huilan Luo</a></li>
+  </ul>
+</div>
+</div>
+
+</div>
+</div>
+
+<div id="news" class="news-section">
+  <h1 class="md-heading text-left">
+    <i class="fa fa-fire" aria-hidden="true"></i>
+    News
+  </h1>
+
+  <ul class="news-list">
+    <li class="news-item">
+      <time datetime="2026-06">Jun. 2026</time>
+      <span class="news-emoji" aria-hidden="true">🎉</span>
+      <span><strong>[TGRS]</strong> <strong>DarkSalNet</strong> was accepted by <a href="https://ieeexplore.ieee.org/document/11560967" target="_blank">TGRS</a>.</span>
+    </li>
+    <li class="news-item">
+      <time datetime="2026-06">Jun. 2026</time>
+      <span class="news-emoji" aria-hidden="true">🎓</span>
+      <span><strong>[JXUST]</strong> Graduated from <a href="https://www.jxust.edu.cn/" target="_blank">Jiangxi University of Science and Technology</a> with a M.Eng. in Artificial Intelligence.</span>
+    </li>
+    <li class="news-item">
+      <time datetime="2025-9">Sep. 2025</time>
+      <span class="news-emoji" aria-hidden="true">📄</span>
+      <span><strong>[JASTARS]</strong> <strong>MTPNet</strong> was accepted by <a href="https://ieeexplore.ieee.org/document/11153031" target="_blank">JASTARS</a>.</span>
+    </li>
+  </ul>
+</div>
+
+<div id="timeline" class="timeline-brief">
+  <h1 class="md-heading text-left">
+    <i class="fa fa-tasks" aria-hidden="true"></i>
+    Experiences
+  </h1>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        <img class="social-icon" src="https://www.urongda.com/images/normal/medium/jiangxi-university-of-science-and-technology-logo-1024px.png" alt="JXUST logo"/>
+        Sep. 2023 - Jun. 2026
+      </div>
+      <div class="timeline-title">
+        M.Eng. in Computer Technology @ <a href="https://www.jxust.edu.cn/" target="_blank">Jiangxi University of Science and Technology</a>
+      </div>
+      <div class="timeline-desc">
+        <div class="timeline-host">
+          Supervisor: <a href="https://ie.jxust.edu.cn/info/1094/8189.htm" target="_blank">Prof. Huilan Luo</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="publications" class="publications">
+  <h1 class="md-heading text-left">
+    <i class="fa fa-file" aria-hidden="true"></i>
+    Publications
+  </h1>
+
+  <div class="pub-list">
+
+    <!-- DarkSalNet -->
+    <div class="pub pub-journal" data-selected="true" data-year="2026">
+      <div class="pub-left" data-venue="TGRS 2026">
+        <img class="intro-img frame" src="images/images/DarkSalNet.jpeg" alt="DarkSalNet">
+      </div>
+      <div class="pub-right">
+        <div class="pub-eyebrow">
+          <span class="pub-kind">Journal</span>
+          <span class="pub-rank">CCF B</span>
+        </div>
+        <div class="title">
+          Cross-Modal Fusion with UVI Enhancement for Salient Object  Detection in Low-Light ORSI Images
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            <b>Jianlong He</b>, Huilan Luo, Xia Cai, Ziran Gao
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">TGRS 2026</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="https://ieeexplore.ieee.org/document/11560967" target="_blank">Paper</a>
+          <a class="tag" href="https://github.com/elaxEgan/DarkSalNet" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MTPNet -->
+    <div class="pub pub-journal" data-selected="true" data-year="2025">
+      <div class="pub-left" data-venue="JASTARS 2025">
+        <img class="intro-img frame" src="images/images/MTPNet.jpeg" alt="MTPNet">
+      </div>
+      <div class="pub-right">
+        <div class="pub-eyebrow">
+          <span class="pub-kind">Journal</span>
+          <span class="pub-rank">JCR Q1</span>
+        </div>
+        <div class="title">
+          Prompt-Driven Multitask Learning With Task Tokens for ORSI Salient Object Detection
+        </div>
+        <div class="authors">
+          <font style="font-size: 11pt;">
+            Huilan Luo, <b>Jianlong He</b>, Shuxin Yang
+          </font>
+        </div>
+        <div class="publish">
+          <span class="place">JASTARS 2025</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="https://ieeexplore.ieee.org/document/11153031" target="_blank">Paper</a>
+          <a class="tag" href="https://github.com/elaxEgan/MTPNet" target="_blank">Code</a>
+        </div>
+      </div>
+    </div>
+
+   
+  </div>
+</div>
+<div id="codebase" class="bio">
+  <div class="bio-body" style="overflow:hidden;">
+    <h1 class="md-heading text-left">
+      <i class="fa fa-github" aria-hidden="true"></i>
+      GitHub
+    </h1>  
+
+    <div class="card-container">
+
+        <!-- DarkSalNet -->
+        <div class="github-card">
+          <div>
+            <a class="repo-link" href="https://github.com/elaxEgan/DarkSalNet" target="_blank">
+              elaxEgan/<strong>DarkSalNet</strong>
+            </a>
+            <span class="label">Project</span>
+          </div>
+          <div class="description">
+            Official implementation of <em>DarkSalNet</em>: Cross-Modal Fusion with UVI Enhancement for Salient Object  Detection in Low-Light ORSI Images.
+          </div>
+          <div class="meta">
+            <div class="dot"></div>
+            <div>Python</div>
+            <a href="https://github.com/elaxEgan/DarkSalNet/stargazers" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 
+                14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 
+                179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 
+                119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 
+                26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 
+                8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
+              </svg>
+              Star &nbsp; <span id="star-pasa">–</span>
+            </a>
+            <a href="https://github.com/elaxEgan/DarkSalNet/network/members" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 
+                8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 
+                0V7a1.51 1.51 0 0 0 .82 1.34L8 
+                9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 
+                1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 
+                4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 
+                0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 
+                1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
+              </svg>
+              Fork &nbsp; <span id="fork-pasa">–</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- MTPNet -->
+        <div class="github-card">
+          <div>
+            <a class="repo-link" href="https://github.com/elaxEgan/MTPNet" target="_blank">
+              elaxEgan/<strong>MTPNet</strong>
+            </a>
+            <span class="label">Project</span>
+          </div>
+          <div class="description">
+            Official PyTorch implementation of <em>Niagara</em>: Normal-Integrated Geometric Affine Field for Single-View Scene Reconstruction.
+          </div>
+          <div class="meta">
+            <div class="dot"></div>
+            <div>Python</div>
+            <a href="https://github.com/elaxEgan/MTPNet/stargazers" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 
+                14.5L369.8 316.2 115.9 353.1c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 
+                179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 
+                119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 
+                26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 
+                8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z"></path>
+              </svg>
+              Star &nbsp; <span id="star-niagara">–</span>
+            </a>
+            <a href="https://github.com/elaxEgan/MTPNet/network/members" target="_blank">
+              <svg fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M14 4a2 2 0 1 0-2.47 1.94V7a.48.48 0 0 1-.27.44L8.49 
+                8.88l-2.76-1.4A.49.49 0 0 1 5.46 7V5.94a2 2 0 1 0-1 
+                0V7a1.51 1.51 0 0 0 .82 1.34L8 
+                9.74v1.32a2 2 0 1 0 1 0V9.74l2.7-1.36A1.49 
+                1.49 0 0 0 12.52 7V5.92A2 2 0 0 0 14 
+                4zM4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 
+                0zm5.47 9a1 1 0 1 1-2 0 1 1 0 0 
+                1 2 0zM12 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path>
+              </svg>
+              Fork &nbsp; <span id="fork-niagara">–</span>
+            </a>
+          </div>
+        </div>
+
+       
+
+    </div> <!-- /card-container -->
+  </div>
+</div>
+
+<!-- Auto-fetch GitHub stars/forks -->
+<script>
+(function () {
+  const repos = [
+    { owner: 'elaxEgan', name: 'DarkSalNet', starEl: 'star-darksal', forkEl: 'fork-darksal' },
+    { owner: 'elaxEgan', name: 'MTPNet', starEl: 'star-mtp', forkEl: 'fork-mtp' },
+  ];
+
+  function formatNum(n) {
+    if (typeof n !== 'number') return '–';
+    if (n < 1000) return String(n);
+    if (n < 1000000) return (n/1000).toFixed(n % 1000 === 0 ? 0 : 1).replace(/\.0$/, '') + 'k';
+    return (n/1000000).toFixed(n % 1000000 === 0 ? 0 : 1).replace(/\.0$/, '') + 'M';
+  }
+
+  function animateCount(node, target) {
+    if (!node) return;
+    if (typeof target !== 'number') { node.textContent = '–'; return; }
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || target === 0 || !window.requestAnimationFrame) {
+      node.textContent = formatNum(target);
+      return;
+    }
+    var start = null, duration = 900;
+    function frame(ts) {
+      if (start === null) start = ts;
+      var p = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      node.textContent = formatNum(Math.round(target * eased));
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  repos.forEach(async ({ owner, name, starEl, forkEl }) => {
+    const starNode = document.getElementById(starEl);
+    const forkNode = document.getElementById(forkEl);
+    try {
+      const res = await fetch(`https://api.github.com/repos/${owner}/${name}`);
+      if (!res.ok) throw new Error('GitHub API error: ' + res.status);
+      const data = await res.json();
+      animateCount(starNode, data.stargazers_count);
+      animateCount(forkNode, data.forks_count);
+    } catch (e) {
+      // Keep the default placeholder if the GitHub API request fails.
+      // Optional: console.warn(e);
+    }
+  });
+})();
+</script>
+
+
+  </div>
+	
+<!-- JavaScript to handle button clicks -->
+<script>
+  // Optional publication filter buttons. Guarded to avoid console errors if the buttons are not shown.
+  const showSelectedBtn = document.getElementById('show-selected-btn');
+  const showAllBtn = document.getElementById('show-all-btn');
+  const publications = document.querySelectorAll('.pub');
+
+  if (showSelectedBtn) {
+    showSelectedBtn.addEventListener('click', function() {
+      publications.forEach(pub => {
+        pub.style.display = pub.getAttribute('data-selected') === 'true' ? 'block' : 'none';
+      });
+    });
+  }
+
+  if (showAllBtn) {
+    showAllBtn.addEventListener('click', function() {
+      publications.forEach(pub => {
+        pub.style.display = 'block';
+      });
+    });
+  }
+</script>
+
+<!-- Removed obsolete GitHub stats script for unrelated repositories to avoid missing-element JavaScript errors. -->
+
+
+
+
+<style>
+  .reviewer-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+
+  .reviewer-column {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    font-size: 0.85em;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1em;
+    margin-bottom: 4px;
+  }
+
+  .reviewer-column::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #555;
+  }
+
+  @media (max-width: 600px) {
+    .reviewer-column {
+      flex: 1 1 100%;
+    }
+  }
+
+  .reviewer-title {
+    margin-top: 12px;
+    font-weight: bold;
+  }
+</style>
+<div class="wrapper">
+  <div id="awards" class="bio">
+    <h1 class="md-heading text-left">
+      <i class="fa fa-tasks" aria-hidden="true"></i>
+      Selected Honors & Awards
+    </h1>
+    <ul class="placeholder-list">
+      <li><em>Coming Soon...</em></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div id="academicservices" class="bio">
+    <div class="bio-body" style="overflow:hidden;">
+      <h1 class="md-heading text-left">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        Academic Services
+      </h1>  
+      <ul class="placeholder-list">
+        <li><em>Coming Soon...</em></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="wrapper">
+  <div id="academicservices" class="bio">
+    <div class="bio-body" style="overflow:hidden;">
+      <h1 class="md-heading text-left">
+        <i class="fa fa-tasks" aria-hidden="true"></i>
+        Academic Services
+      </h1>  
+
+      <div class="reviewer-title">Conference Reviewer:</div>
+      <div class="reviewer-section">
+        <div class="reviewer-column">Conference on Computer Vision and Pattern Recognition (CVPR)</div>
+        <div class="reviewer-column">International Conference on Computer Vision (ICCV)</div>
+        <div class="reviewer-column">European Conference on Computer Vision (ECCV)</div>
+        <div class="reviewer-column">Conference on Neural Information Processing Systems (NeurIPS)</div>
+        <div class="reviewer-column">International Conference on Learning Representations (ICLR)</div>
+        <div class="reviewer-column">International Conference on Machine Learning (ICML)</div>
+        <div class="reviewer-column">International Conference on Robotics and Automation (ICRA)</div>
+        <div class="reviewer-column">International Conference on Intelligent Robots and Systems (IROS)</div>
+      </div>
+
+      <div class="reviewer-title">Journal Reviewer:</div>
+      <div class="reviewer-section">
+        <div class="reviewer-column">International Journal of Computer Vision (IJCV)</div>
+        <div class="reviewer-column">Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</div>
+        <div class="reviewer-column">Transactions on Neural Networks and Learning Systems (TNNLS)</div>
+        <div class="reviewer-column">Transactions on Circuits and Systems for Video Technology (TCSVT)</div>
+        <div class="reviewer-column">Transactions on Multimedia (TMM)</div>
+        <div class="reviewer-column">Robotics and Automation Letters (RA-L)</div>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+
+
+<!-- <div style="display: flex; justify-content: center; align-items: center;">
+  <div style="max-width: 400px; width: 100%;">
+    <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=K9NLvpbM7GH1cTCvhvVlo4LW5p-d2mRZYw6UhrAFw0g&cl=ffffff&w=a"></script>
+  </div>
+</div>
+
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Personal Email:</li>
+          <li><a href="mailto:">jcenaa [at] connect.ust.hk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+          <a href="https://scholar.google.com/citations?user=7SKAhBwAAAAJ&hl=en" target="_blank" class="icon-button github">
+          <i class="ai ai-google-scholar-square icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://github.com/Jun-CEN" target="_blank" class="icon-button github">
+            <i class="fa fa-github icon-github"></i>
+            <span></span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/jun-cen-45b995219/" target="_blank" class="icon-button linkedin">
+            <i class="fa fa-linkedin icon-linkedin"></i>
+            <span></span>
+          </a>
+          -->
+          <!-- <a href="work/Resume_Jun_CEN.pdf" target="_blank" class="icon-button github">
+            <i class="ai ai-cv icon-github"></i>
+            <span></span>
+          </a>
+      </div>
+	<div class="footer-col footer-col-3">
+    	<!--<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fwillhua127.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
+	<!-- <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?user=Lxe71v4AAAAJ&hl=en&url=https%3A%2F%2Fscholar.google.com%2Fcitations&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
+		<p class="text">Last updated: Aug, 2025.<br>The style of this website is borrowed from <a href='https://leoyuan.site/' target="_blank">Zeqing Yuan's</a>.</p>
+	</div> -->
+  <!-- </div>
+  </div>
+
+</footer>
+    <div class="back-to-top">Top</div>
+
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+    
+        }
+    });
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+  </body> --> 
+
+<!--
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-60071442-1', 'auto');
+  ga('send', 'pageview');
+</script>
+-->
+<footer class="site-footer fancy-footer">
+  <div class="footer-accent" aria-hidden="true"></div>
+  <div class="wrapper">
+    <div class="footer-grid">
+
+      <!-- Left: identity -->
+      <div class="footer-about">
+        <div class="footer-name">Jianlong He</div>
+        <p class="footer-tagline">
+          Incoming Ph.D. student at WHU, working on remote sensing image for
+          multimodal large language models and world models.
+        </p>
+        <div class="footer-social">
+          <a href="https://scholar.google.com/citations?user=3WKpzJ0AAAAJ&hl=en" target="_blank" aria-label="Google Scholar" title="Google Scholar">
+            <i class="ai ai-google-scholar"></i>
+          </a>
+          <a href="https://github.com/elaxEgan" target="_blank" aria-label="GitHub" title="GitHub">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="data/CV_of_Jianlong_He.pdf" target="_blank" aria-label="CV" title="Curriculum Vitae">
+            <i class="ai ai-cv"></i>
+          </a>
+          <a href="mailto:hejianlong@mail.jxust.edu.cn" aria-label="Email" title="Email">
+            <i class="fa fa-envelope"></i> 
+          </a>
+        </div>
+        <a class="footer-mail" href="mailto:hejianlong@mail.jxust.edu.cn">hejianlong [at] mail [dot] jxust [dot] edu [dot] cn</a>
+      </div>
+
+      <!-- Center: visitor map -->
+      <div class="footer-map">
+        <div class="footer-visitor-map" aria-label="Visitor map">
+          <script
+            type="text/javascript"
+            id="mapmyvisitors"
+            src="https://mapmyvisitors.com/map.js?d=pzNRoLGEsQkXWlrzGqQZB86PdFJId9nEEFj6rRmHh2g&cl=ffffff&w=a">
+          </script>
+          <noscript>
+            <a href="https://mapmyvisitors.com/web/1bxl3" target="_blank" rel="noopener">Visitor Map</a>
+          </noscript>
+        </div>
+      </div>
+
+      <!-- Right: meta -->
+      <div class="footer-meta">
+        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Last updated: June 2026</p>
+        <p>Background photo: <a href="images/WHU.jpg" target="_blank">WHU</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2026 Jianlong He</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.documentElement.classList.add('reveal-enabled');
+
+  var sections = document.querySelectorAll(
+    '#bio, #news, #timeline, #publications, #codebase, #awards, #academicservices, .site-footer'
+  );
+
+  sections.forEach(function (section, index) {
+    section.classList.add('reveal-section');
+    section.style.setProperty('--reveal-delay', Math.min(index * 45, 180) + 'ms');
+  });
+
+  if (!('IntersectionObserver' in window)) {
+    sections.forEach(function (section) {
+      section.classList.add('is-visible');
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -8% 0px'
+  });
+
+  sections.forEach(function (section) {
+    observer.observe(section);
+  });
+})();
+</script>
+
+<a href="#" id="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Scroll progress bar ---------- */
+  var progress = document.getElementById('scroll-progress');
+  function updateProgress() {
+    if (!progress) return;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    var ratio = max > 0 ? (window.pageYOffset || doc.scrollTop || 0) / max : 0;
+    progress.style.transform = 'scaleX(' + Math.min(Math.max(ratio, 0), 1) + ')';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+
+  /* ---------- Back to top ---------- */
+  var topBtn = document.getElementById('back-to-top');
+  if (topBtn) {
+    window.addEventListener('scroll', function () {
+      topBtn.classList.toggle('is-shown', (window.pageYOffset || 0) > 420);
+    }, { passive: true });
+    topBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+
+  /* ---------- Scrollspy: highlight current section in the nav ---------- */
+  var navLinks = document.querySelectorAll('.site-nav .trigger .page-link');
+  var idToLink = {};
+  var spySections = [];
+  navLinks.forEach(function (link) {
+    var id = (link.getAttribute('href') || '').slice(1);
+    var section = id && document.getElementById(id);
+    if (section) {
+      idToLink[id] = link;
+      spySections.push(section);
+    }
+  });
+  if ('IntersectionObserver' in window && spySections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove('nav-active'); });
+        var link = idToLink[entry.target.id];
+        if (link) link.classList.add('nav-active');
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    spySections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Typewriter: research interests ---------- */
+  var typingEl = document.getElementById('typing-text');
+  if (typingEl) {
+    var phrases = [
+      'Remote Sensing Image Interpretation ',
+      'Multimodal Large Language Models',
+      'Salient Object Detection',
+      'Computer Vision'
+    ];
+    if (reduceMotion) {
+      typingEl.textContent = phrases[0];
+    } else {
+      var pi = 0, ci = 0, deleting = false;
+      (function tick() {
+        var word = phrases[pi];
+        ci += deleting ? -1 : 1;
+        typingEl.textContent = word.slice(0, ci);
+        var delay = deleting ? 32 : 72;
+        if (!deleting && ci === word.length) {
+          delay = 2100;
+          deleting = true;
+        } else if (deleting && ci === 0) {
+          deleting = false;
+          pi = (pi + 1) % phrases.length;
+          delay = 420;
+        }
+        setTimeout(tick, delay);
+      })();
+    }
+  }
+
+  /* ---------- Neural-network particles over the cover photo ---------- */
+  var canvas = document.getElementById('neural-canvas');
+  var cover = document.getElementById('profile-cover');
+  if (canvas && cover && canvas.getContext && !reduceMotion) {
+    var ctx = canvas.getContext('2d');
+    var nodes = [];
+    var w = 0, h = 0;
+    var rafId = null, running = false, coverVisible = true;
+    var LINK_DIST = 135;
+
+    function makeNode() {
+      return {
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.36,
+        vy: (Math.random() - 0.5) * 0.36,
+        r: 1 + Math.random() * 1.6
+      };
+    }
+
+    function resize() {
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      w = cover.clientWidth;
+      h = cover.clientHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var target = Math.max(24, Math.min(64, Math.round(w / 26)));
+      while (nodes.length < target) nodes.push(makeNode());
+      nodes.length = target;
+    }
+
+    function step() {
+      ctx.clearRect(0, 0, w, h);
+      var i, j, n;
+      for (i = 0; i < nodes.length; i++) {
+        n = nodes[i];
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < -12) n.x = w + 12; else if (n.x > w + 12) n.x = -12;
+        if (n.y < -12) n.y = h + 12; else if (n.y > h + 12) n.y = -12;
+      }
+      ctx.lineWidth = 1;
+      for (i = 0; i < nodes.length; i++) {
+        for (j = i + 1; j < nodes.length; j++) {
+          var dx = nodes[i].x - nodes[j].x;
+          var dy = nodes[i].y - nodes[j].y;
+          var d2 = dx * dx + dy * dy;
+          if (d2 < LINK_DIST * LINK_DIST) {
+            var alpha = 0.32 * (1 - Math.sqrt(d2) / LINK_DIST);
+            ctx.strokeStyle = 'rgba(255,255,255,' + alpha.toFixed(3) + ')';
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      ctx.fillStyle = 'rgba(255,255,255,0.78)';
+      for (i = 0; i < nodes.length; i++) {
+        n = nodes[i];
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      rafId = requestAnimationFrame(step);
+    }
+
+    function start() {
+      if (!running) {
+        running = true;
+        rafId = requestAnimationFrame(step);
+      }
+    }
+    function stop() {
+      running = false;
+      if (rafId) cancelAnimationFrame(rafId);
+    }
+    function maybeStart() {
+      if (coverVisible && !document.hidden) start(); else stop();
+    }
+
+    resize();
+    window.addEventListener('resize', resize);
+    document.addEventListener('visibilitychange', maybeStart);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        coverVisible = entries[0].isIntersecting;
+        maybeStart();
+      }).observe(cover);
+    }
+    maybeStart();
+  }
+})();
+</script>
+
+<script>
+(function () {
+  if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return;
+
+  document.querySelectorAll('.pub, .github-card').forEach(function (card) {
+    card.addEventListener('pointermove', function (event) {
+      var rect = card.getBoundingClientRect();
+      card.style.setProperty('--spot-x', (event.clientX - rect.left) + 'px');
+      card.style.setProperty('--spot-y', (event.clientY - rect.top) + 'px');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
