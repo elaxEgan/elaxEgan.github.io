@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniFlow-RS | Unified Generative Prediction for Remote Sensing</title>
+  <meta name="description" content="UniFlow-RS unifies six remote-sensing tasks through a shared generative prediction process, structured visual targets, and task–modality adaptive timestep sampling.">
+  <meta property="og:title" content="UniFlow-RS: Unified Generative Prediction for Heterogeneous Remote-Sensing Tasks">
+  <meta property="og:description" content="One shared model. Six tasks. Thirteen datasets. Explore the method, demonstrations, and results.">
+  <meta property="og:image" content="https://elaxegan.github.io/uniflow-rs/assets/overview.webp">
+  <meta property="og:url" content="https://elaxegan.github.io/uniflow-rs/">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://elaxegan.github.io/uniflow-rs/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#abstract">Skip to content</a>
+<header class="hero wrap">
+  <h1><span class="brand">UniFlow-RS</span><br>Unified Generative Prediction for<br class="desktop-break"> Heterogeneous Remote-Sensing Tasks</h1>
+  <div class="authors" aria-label="Authors">
+    <span><a href="https://openreview.net/profile?id=~Jianlong_He1">Jianlong He</a><sup>1</sup></span>
+    <span><a href="https://openreview.net/profile?id=~Liang_Liao3">Liang Liao</a><sup>2</sup></span>
+    <span><a href="https://openreview.net/profile?id=~Jing_Xiao6">Jing Xiao</a><sup>1</sup></span>
+    <span><a href="https://openreview.net/profile?id=~Chaofeng_Chen1">Chaofeng Chen</a><sup>1</sup></span>
+    <span><a href="https://openreview.net/profile?id=~Gui-Song_Xia3">Gui-Song Xia</a><sup>1</sup></span>
+  </div>
+  <div class="affiliations"><p><sup>1</sup> School of Artificial Intelligence, Wuhan University</p><p><sup>2</sup> Hangzhou Institute of Technology, Xidian University</p></div>
+  <nav class="resources" aria-label="Project resources">
+    <a class="button" href="assets/uniflow-rs.pdf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg>Paper</a>
+    <a class="button" href="#demo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l11 7-11 7z"/></svg>Demo</a>
+    <a class="button" href="#results"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3v18h17M8 17v-5M13 17V8M18 17V4"/></svg>Results</a>
+    <a class="button" href="#bibtex"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5H6v14h3M15 5h3v14h-3M10 9h4M10 15h4"/></svg>BibTeX</a>
+  </nav>
+  <p class="release-note">Research preprint · Code release forthcoming</p>
+</header>
+<main>
+  <section class="teaser wrap" id="demo" aria-label="Six-task demonstration">
+    <div class="video-frame"><video controls playsinline muted loop preload="metadata" poster="assets/demo-poster.webp" width="1600" height="900" aria-label="Prerecorded demonstration of prompts, inputs, ground truth and UniFlow-RS predictions across six tasks"><source src="assets/demo.mp4" type="video/mp4">Your browser does not support video playback.</video></div>
+    <p class="lead"><strong>One shared model. Six remote-sensing tasks.</strong><br>Specify the task with a prompt; predict its structured visual target through the same generative process.</p>
+    <p class="small muted">Prerecorded predictions and reference labels, with synchronized detail views. Playback is not a latency measurement.</p>
+    <div class="task-list" aria-label="Supported tasks"><span>Building extraction</span><span>Change detection</span><span>Semantic segmentation</span><span>Height estimation</span><span>Referring segmentation</span><span>Rotated detection</span></div>
+  </section>
+
+  <section class="band" id="abstract"><div class="reading">
+    <h2>Abstract</h2>
+    <p>Remote-sensing foundation models increasingly unify representations across sensing modalities and downstream tasks, yet their prediction mechanisms remain largely task-specific. Separate decoders, heads, and objectives leave prediction fragmented across tasks. <em>Can heterogeneous remote-sensing tasks share the prediction process?</em></p>
+    <p><strong>UniFlow-RS</strong> answers this question with a single latent flow-matching predictor shared across tasks. Heterogeneous outputs are encoded as structured visual targets in a common latent space. Task-dependent conditioning accommodates different input configurations, while a shared Flow Matching objective removes the need for learned task-specific prediction heads and losses. Task–Modality Adaptive Timestep Sampling (<strong>TMAS</strong>) adapts training timestep allocation to the online learning state of each task–modality group.</p>
+    <p>A single model handles six tasks across thirteen datasets and remains competitive with task-specific methods. The same checkpoint also transfers across unseen datasets, task settings, occlusion conditions, and near-infrared false-color imagery, without target-specific adaptation.</p>
+  </div></section>
+
+  <section class="section wrap" id="method">
+    <h2>A shared prediction process</h2>
+    <p class="section-intro">Unify the output space, not just the backbone.</p>
+    <figure><a class="zoom" href="assets/architecture.webp" aria-label="Enlarge the UniFlow-RS architecture"><img src="assets/architecture.webp" alt="UniFlow-RS architecture: structured visual targets, a frozen VAE, a shared latent flow predictor with LoRA, and deterministic task recovery." loading="lazy" width="2200" height="1100"></a><figcaption>Task-specific targets are represented in a shared visual space, transported by one generative predictor, and recovered in their native evaluation formats.</figcaption></figure>
+    <div class="method-notes"><div><h3>Structured visual targets</h3><p>Binary masks, class-coded maps, continuous height fields, and rotated-object targets share the same latent prediction space.</p></div><div><h3>Adaptive joint learning</h3><p>TMAS tracks difficulty and learning activity across task–modality groups to adapt where training samples the flow trajectory.</p></div><div><h3>Deterministic recovery</h3><p>Task-dependent recovery converts the generated outputs to masks, semantic labels, heights, or rotated instances.</p></div></div>
+  </section>
+
+  <section class="band" id="results"><div class="wrap">
+    <h2>Six tasks, one model</h2>
+    <p class="section-intro">Qualitative results across optical and SAR imagery.</p>
+    <figure><a class="zoom" href="assets/qualitative.webp" aria-label="Enlarge the six-task qualitative results"><img src="assets/qualitative.webp" alt="Input, ground-truth and UniFlow-RS predictions for six remote-sensing task families." loading="lazy" width="2200" height="1300"></a><figcaption>Representative qualitative examples from the paper. Selected examples illustrate behavior rather than average performance. Click any result figure to inspect it at full resolution.</figcaption></figure>
+    <h3 class="center subsection">Joint adaptation across task families</h3>
+    <div class="table-scroll" role="region" aria-label="Task-level performance comparison" tabindex="0"><table><caption>Task-level scores from the paper. Higher is better in every column.</caption><thead><tr><th scope="col">Setting</th><th scope="col">Building<br><span>IoU</span></th><th scope="col">Change<br><span>IoU</span></th><th scope="col">Semantic<br><span>mIoU</span></th><th scope="col">Height<br><span>δ₁</span></th><th scope="col">Referring<br><span>gIoU</span></th><th scope="col">Detection<br><span>mAP50</span></th><th scope="col">UTS ↑</th></tr></thead><tbody>
+    <tr><th scope="row">Single-task</th><td>75.63</td><td>73.91</td><td>49.26</td><td>72.13</td><td>72.54</td><td>61.39</td><td>67.48</td></tr>
+    <tr><th scope="row">Joint</th><td>76.38</td><td><strong>74.75</strong></td><td>51.12</td><td>72.06</td><td>73.61</td><td>62.80</td><td>68.45</td></tr>
+    <tr class="ours"><th scope="row">Joint + TMAS</th><td><strong>76.93</strong></td><td>74.63</td><td><strong>52.57</strong></td><td><strong>73.31</strong></td><td><strong>73.93</strong></td><td><strong>64.75</strong></td><td><strong>69.35</strong></td></tr>
+    </tbody></table></div>
+    <p class="small muted table-note">Single-task uses one LoRA per task; joint variants share one LoRA. UTS averages the eligible native metrics within each task and then across tasks. See the paper for the dataset-level protocols.</p>
+  </div></section>
+
+  <section class="section wrap" id="generalization">
+    <h2>Beyond the training setting</h2>
+    <p class="section-intro">The same checkpoint, without target-specific adaptation.</p>
+    <div class="tabs" role="tablist" aria-label="Generalization examples"><button role="tab" id="tab-ref" aria-controls="panel-ref" aria-selected="true" tabindex="0">Language-guided transfer</button><button role="tab" id="tab-occ" aria-controls="panel-occ" aria-selected="false" tabindex="-1">Occlusion &amp; IRRG</button></div>
+    <div role="tabpanel" id="panel-ref" aria-labelledby="tab-ref"><figure><a class="zoom" href="assets/generalization-referring.webp"><img src="assets/generalization-referring.webp" alt="Language-guided cross-dataset transfer: queries, input images and qualitative comparisons." loading="lazy" width="2200" height="1000"></a><figcaption>Language-guided transfer examples from the paper, with the original queries and reference labels.</figcaption></figure></div>
+    <div role="tabpanel" id="panel-occ" aria-labelledby="tab-occ" hidden><figure><a class="zoom" href="assets/generalization-occlusion.webp"><img src="assets/generalization-occlusion.webp" alt="Qualitative comparisons on canopy-occluded roads, synthetic clouds and near-infrared false-color imagery." loading="lazy" width="2200" height="1500"></a><figcaption>Transfer under real tree-canopy occlusion, synthetic cloud occlusion, and IRRG inputs. See the paper for each baseline's initialization, input mapping, and evaluation setting.</figcaption></figure></div>
+  </section>
+
+  <section class="band"><div class="wrap">
+    <h2>From image texture to structured output</h2>
+    <p class="section-intro">A look inside the transport trajectory.</p>
+    <figure><a class="zoom" href="assets/trajectory.webp"><img src="assets/trajectory.webp" alt="Decoded transport states evolving from the source image into task outputs across six tasks." loading="lazy" width="2400" height="1800"></a><figcaption>Decoded transport states along one inference trajectory per sample. This visualization uses 10 steps to expose intermediate states; the default evaluation uses 2-step inference.</figcaption></figure>
+  </div></section>
+
+  <section class="section reading" id="bibtex"><div class="citation-heading"><h2>BibTeX</h2><button class="copy-button" id="copy-citation" type="button">Copy citation</button></div><pre><code id="citation">@misc{he2026uniflowrs,
+  title={UniFlow-RS: Unified Generative Prediction for
+         Heterogeneous Remote-Sensing Tasks},
+  author={He, Jianlong and Liao, Liang and Xiao, Jing and
+          Chen, Chaofeng and Xia, Gui-Song},
+  year={2026},
+  url={https://elaxegan.github.io/uniflow-rs/}
+}</code></pre><p id="copy-status" class="small muted" role="status" aria-live="polite">Preprint citation; an arXiv identifier will be added when available.</p></section>
+</main>
+<footer><p>UniFlow-RS · Wuhan University &amp; Xidian University</p><p class="small">Layout inspired by the <a href="https://flowdis.github.io/">FlowDIS project page</a>. Figures and demonstrations are from the UniFlow-RS manuscript.</p></footer>
+</body>
+</html>
